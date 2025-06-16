@@ -52,14 +52,16 @@ class Poster:
             "special": "#FFFF00",
             "track": "#4DD2FF",
         }
-        self.special_distance = {"special_distance": 10, "special_distance2": 20}
+        self.special_distance = {
+            "special_distance": 10, "special_distance2": 20}
         self.width = 200
         self.height = 300
         self.years = None
         self.tracks_drawer = None
         self.trans = None
         self.set_language(None)
-        self.tc_offset = datetime.now(pytz.timezone("Asia/Shanghai")).utcoffset()
+        self.tc_offset = datetime.now(
+            pytz.timezone("Asia/Shanghai")).utcoffset()
         self.github_style = "align-firstday"
 
     def set_language(self, language):
@@ -148,7 +150,8 @@ class Poster:
     def __draw_header(self, d):
         text_color = self.colors["text"]
         title_style = "font-size:12px; font-family:Arial; font-weight:bold;"
-        d.add(d.text(self.title, insert=(10, 20), fill=text_color, style=title_style))
+        d.add(d.text(self.title, insert=(10, 20),
+              fill=text_color, style=title_style))
 
     def __draw_footer(self, d):
         text_color = self.colors["text"]
@@ -169,7 +172,7 @@ class Poster:
 
         d.add(
             d.text(
-                self.trans("Runner"),
+                self.trans("Rider"),
                 insert=(10, self.height - 20),
                 fill=text_color,
                 style=header_style,
@@ -194,7 +197,8 @@ class Poster:
             )
 
             d.add(
-                d.rect((65, self.height - 17), (2.6, 2.6), fill=self.colors["special"])
+                d.rect((65, self.height - 17), (2.6, 2.6),
+                       fill=self.colors["special"])
             )
 
             d.add(
@@ -207,7 +211,8 @@ class Poster:
             )
 
             d.add(
-                d.rect((65, self.height - 13), (2.6, 2.6), fill=self.colors["special2"])
+                d.rect((65, self.height - 13), (2.6, 2.6),
+                       fill=self.colors["special2"])
             )
 
             d.add(
@@ -237,7 +242,8 @@ class Poster:
         )
         d.add(
             d.text(
-                self.trans("Weekly") + ": " + format_float(len(self.tracks) / weeks),
+                self.trans("Weekly") + ": " +
+                format_float(len(self.tracks) / weeks),
                 insert=(120, self.height - 10),
                 fill=text_color,
                 style=small_value_style,
@@ -245,7 +251,8 @@ class Poster:
         )
         d.add(
             d.text(
-                self.trans("Total") + ": " + self.format_distance(total_length),
+                self.trans("Total") + ": " +
+                self.format_distance(total_length),
                 insert=(141, self.height - 15),
                 fill=text_color,
                 style=small_value_style,
@@ -253,7 +260,8 @@ class Poster:
         )
         d.add(
             d.text(
-                self.trans("Avg") + ": " + self.format_distance(average_length),
+                self.trans("Avg") + ": " +
+                self.format_distance(average_length),
                 insert=(141, self.height - 10),
                 fill=text_color,
                 style=small_value_style,
