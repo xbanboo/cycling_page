@@ -47,7 +47,7 @@ const LIGHTS_ON = true;
 //set to `true` if you want to show the 'Elevation Gain' column
 const SHOW_ELEVATION_GAIN = true;
 //set to `true` if you want to show the 'BPM' column
-const SHOW_BPM = false;
+const SHOW_BPM = true;
 // richer title for the activity types (like garmin style)
 const RICH_TITLE = false;
 
