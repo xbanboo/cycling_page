@@ -17,7 +17,7 @@ const getBasePath = () => {
 const data: ISiteMetadataResult = {
   siteTitle: "Eric's Cycling",
   siteUrl: 'https://cyc.pubu.io',
-  logo: 'https://photo.pubu.io/Banboo%20Profile%20Image.jpeg',
+  logo: 'https://photo.pubu.io/banboo-zipic.png',
   description: 'my cycling page',
   navLinks: [
     {
